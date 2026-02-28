@@ -1,6 +1,6 @@
 state = "MOVE"; // Initial state
 
-walk_speed = 4;
+walk_speed = 3;
 h_speed = 0;
 v_speed = 0;
 
@@ -21,7 +21,7 @@ attack_speed = 1;
 
 is_dashing = false;
 
-dash_power = 25;
+dash_power = 15;
 dash_friction = 0.85; 
 dash_velocity = 0;
 

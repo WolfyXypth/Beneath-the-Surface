@@ -44,19 +44,43 @@ switch (state) {
 
 		// DASH MOVEMENT
 		if (is_dashing) {
-
 		    h_speed = dash_velocity;
-
 		    dash_velocity *= dash_friction; 
-
 		    dash_timer--;
-	
-			v_speed *= 0.9;
+		    v_speed *= 0.9; // Keep some vertical drag during dash
 
 		    if (dash_timer <= 0) {
 		        is_dashing = false;
+		        dash_cooldown_timer = 20; // Set a cooldown after dash finishes
 		    }
 		}
+
+		// --- IMPROVED COLLISION LOGIC ---
+		// Determine which side of the mask to check based on movement direction
+		var _side = (h_speed > 0) ? bbox_right : bbox_left;
+
+		// Check 3 points: Top, Middle, and Bottom of the knight's side
+		if (tilemap_get_at_pixel(_map_id, _side + h_speed, bbox_top + 2) || 
+		    tilemap_get_at_pixel(_map_id, _side + h_speed, bbox_bottom - 2) ||
+		    tilemap_get_at_pixel(_map_id, _side + h_speed, y)) { 
+    
+		    // Pixel-perfect approach: move to the wall 1 pixel at a time
+		    while (!tilemap_get_at_pixel(_map_id, _side + sign(h_speed), bbox_top + 2) && 
+		           !tilemap_get_at_pixel(_map_id, _side + sign(h_speed), bbox_bottom - 2) &&
+		           !tilemap_get_at_pixel(_map_id, _side + sign(h_speed), y)) {
+		        x += sign(h_speed);
+		        _side = (h_speed > 0) ? bbox_right : bbox_left; // Update side reference
+		    }
+    
+		    h_speed = 0;
+    
+		    // IMPORTANT: If we hit a wall while dashing, stop the dash immediately
+		    if (is_dashing) {
+		        is_dashing = false;
+		        dash_timer = 0;
+		    }
+		}
+		x += h_speed;
 
 		if (tilemap_get_at_pixel(_map_id, x + h_speed, bbox_top) || 
 		    tilemap_get_at_pixel(_map_id, x + h_speed, bbox_bottom - 4)) { 

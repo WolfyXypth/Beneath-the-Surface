@@ -42,6 +42,8 @@
   },
   "name":"Beneath The Surface",
   "resources":[
+    {"id":{"name":"Camera","path":"objects/Camera/Camera.yy",},},
+    {"id":{"name":"DeathZone","path":"objects/DeathZone/DeathZone.yy",},},
     {"id":{"name":"Knight","path":"objects/Knight/Knight.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"Attack_1","path":"sprites/Attack_1/Attack_1.yy",},},
@@ -54,6 +56,7 @@
     {"id":{"name":"Idle","path":"sprites/Idle/Idle.yy",},},
     {"id":{"name":"Jump","path":"sprites/Jump/Jump.yy",},},
     {"id":{"name":"Run","path":"sprites/Run/Run.yy",},},
+    {"id":{"name":"Sprite11","path":"sprites/Sprite11/Sprite11.yy",},},
     {"id":{"name":"TsCave","path":"tilesets/TsCave/TsCave.yy",},},
   ],
   "resourceType":"GMProject",

@@ -82,17 +82,6 @@ switch (state) {
 		}
 		x += h_speed;
 
-		if (tilemap_get_at_pixel(_map_id, x + h_speed, bbox_top) || 
-		    tilemap_get_at_pixel(_map_id, x + h_speed, bbox_bottom - 4)) { 
-    
-		    while (!tilemap_get_at_pixel(_map_id, x + sign(h_speed), bbox_top) && 
-		           !tilemap_get_at_pixel(_map_id, x + sign(h_speed), bbox_bottom - 4)) {
-		        x += sign(h_speed);
-		    }
-		    h_speed = 0;
-		}
-		x += h_speed;
-
 		// 4. VERTICAL MOVEMENT (GRAVITY)
 		v_speed += gravity_power;
 

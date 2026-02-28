@@ -21,7 +21,7 @@ attack_speed = 1;
 
 is_dashing = false;
 
-dash_power = 22;
+dash_power = 24;
 dash_friction = 0.85; 
 dash_velocity = 0;
 

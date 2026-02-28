@@ -1,5 +1,16 @@
-
-
+if (room==cutscene){
+	target_x = 1000;
+    if (x < target_x) {
+        x += walk_speed;
+		sprite_index=Run;
+    } else {
+        x = target_x; 
+		sprite_index=Hurt;
+		room_goto(Room2);
+		
+    }
+}
+else{
 // Use a switch statement to separate your logic
 switch (state) {
     case "MOVE":
@@ -143,6 +154,7 @@ switch (state) {
             sprite_index = Death; // Switch to your death sprite
             hspeed = 0;
             vspeed = 0;
+			room_goto(death_menu);
         }
         break;
 
@@ -152,4 +164,6 @@ switch (state) {
         vspeed = 0;
         // The knight is now locked in this state until the animation ends
         break;
+}
+
 }

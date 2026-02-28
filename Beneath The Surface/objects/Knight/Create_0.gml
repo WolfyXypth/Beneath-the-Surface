@@ -10,3 +10,23 @@ on_ground = false;
 my_scale = 2;
 image_xscale = my_scale;
 image_yscale = my_scale;
+
+is_attacking = false;
+attack_sprite = Attack_1;  
+attack_speed = 1; 
+
+//Dash system
+
+is_dashing = false;
+
+dash_power = 25;
+dash_friction = 0.85; 
+dash_velocity = 0;
+
+dash_time = 14;
+dash_timer = 0;
+
+dash_cooldown = 20;  
+dash_cooldown_timer = 0;
+
+dash_sprite = Dash;    

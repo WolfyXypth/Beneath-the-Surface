@@ -59,4 +59,6 @@ if (!on_ground) {
 }
 
 
-if (h_speed != 0) image_xscale = sign(h_speed);
+if (h_speed != 0) {
+    image_xscale = sign(h_speed) * my_scale;
+}

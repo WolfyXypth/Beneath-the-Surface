@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"s_restart1",
-    "path":"sprites/s_restart1/s_restart1.yy",
+    "name":"s_restart",
+    "path":"sprites/s_restart/s_restart.yy",
   },
   "spriteMaskId":null,
   "visible":true,

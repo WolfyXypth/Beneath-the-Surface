@@ -4,7 +4,7 @@ walk_speed = 5;
 h_speed = 0;
 v_speed = 0;
 
-gravity_power = 0.5;
+gravity_power = 0.4;
 jump_power = -9; 
 
 on_ground = false;

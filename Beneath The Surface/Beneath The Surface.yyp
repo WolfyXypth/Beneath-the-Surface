@@ -83,7 +83,6 @@
     {"id":{"name":"s_button","path":"sprites/s_button/s_button.yy",},},
     {"id":{"name":"s_exit","path":"sprites/s_exit/s_exit.yy",},},
     {"id":{"name":"s_restart","path":"sprites/s_restart/s_restart.yy",},},
-    {"id":{"name":"s_restart1","path":"sprites/s_restart1/s_restart1.yy",},},
     {"id":{"name":"scaled_tileset1_1","path":"sprites/scaled_tileset1_1/scaled_tileset1_1.yy",},},
     {"id":{"name":"scaled_tileset1","path":"sprites/scaled_tileset1/scaled_tileset1.yy",},},
     {"id":{"name":"scaled_tileset2","path":"sprites/scaled_tileset2/scaled_tileset2.yy",},},
